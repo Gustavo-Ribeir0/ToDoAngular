@@ -1,0 +1,9 @@
+.card{
+width: 50%;
+border: 1px solid;
+margin: 20% auto;
+}
+
+.header{
+background-color: rgb(105, 103, 197);
+}

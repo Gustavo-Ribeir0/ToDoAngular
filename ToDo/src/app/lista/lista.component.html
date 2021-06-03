@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" integrity="undefined" crossorigin="anonymous">
+
+<div class="card">
+<div class="header d-flex justify-content-center align-items-center flex-column">
+<label class="text-white">Digite o objetivo</label>
+<input class="form-control" type="text" [(ngModel)]="AdicionarLista" name="itens">
+
+<button class="btn btn-primary text-center" (click)="Adicionar()">Clique aqui</button>
+
+</div>
+
+
+<div class="objetivos">
+<h3 class="text-center my-3">Objetivos</h3>
+<ul>
+<li class="lista my-3" *ngFor="let itens of Lista; let i = index">
+<div class="checkbox">
+<label class="d-flex align-items-center mb-3">
+<input class="mx-1" type="checkbox" (click)="DoItem(i)"/>{{itens}} <button class="btn my-2 btn-info mx-3" (click)="ExcluirLista()">Deletar</button> </label>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="feito m-0 p-0">
+    <h3 class="text-center">Objetivos concluidos</h3>
+    <ul>
+        <li class="lista mx-3" *ngFor="let feito of Concluidos; let i = index">
+            <p class="mx-1 my-3"></p>{{feito}} <button class="btn my-2 btn-info mx-3 my-3" (click)="ExcluirConcluido()">Deletar</button> 
+        </li>
+    </ul>
+</div>
+</div>
+
+
+
